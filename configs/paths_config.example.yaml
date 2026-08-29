@@ -1,0 +1,33 @@
+# Copy this file to paths_config.yaml and fill in paths for your own machine.
+# All scripts in this repo default to relative paths anchored at the repo
+# root (i.e. run every command from the top of this repository), so you often
+# will not need this file at all -- it's provided for anyone who prefers a
+# single-source-of-truth config instead of editing constants at the top of
+# each script.
+
+project_root: .
+
+data:
+  raw_dir: data/raw
+  keyframes_dir: data/keyframes
+  generated_dir: data/generated          # teacher captions, GRPO pairs, DPO pairs
+  avcaps_meta: data/raw/avcaps_meta.csv
+  charades_meta: data/raw/charades_meta.csv
+  teacher_captions: data/generated/all_captions_gemma.json
+
+models:
+  student_id: HuggingFaceTB/SmolVLM2-500M-Video-Instruct
+  teacher_id: google/gemma-4-31b-it        # set to the exact teacher checkpoint you use
+  student_sft: models/student/sft_v2/best
+  student_grpo: models/student/grpo/best
+  student_final: models/student/sft_patch_v2/best   # Condition D (paper's best model)
+  gguf_dir: models/gguf
+
+cache:
+  hf_cache: models/.hf_cache
+  dataset_cache: data/.dataset_cache
+
+logs:
+  training: logs/training
+  eval: logs/eval
+  deployment: logs/deployment

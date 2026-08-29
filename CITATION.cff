@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Smol-VL-BLV: Spatially-Aware Post-Training for Low Vision"
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+preferred-citation:
+  type: conference-paper
+  title: "Small yet Assistive: Spatially-Aware Post-Training for Low Vision"
+  authors:
+    - family-names: "TODO"
+      given-names: "TODO"
+  year: 2026
+  conference:
+    name: "TODO: EMNLP 2026"
+  # TODO: fill in once camera-ready details / ACL Anthology entry exist
