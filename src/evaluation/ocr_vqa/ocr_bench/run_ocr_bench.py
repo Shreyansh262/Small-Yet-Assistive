@@ -5,7 +5,7 @@ from pathlib import Path
 from datasets import load_from_disk
 from transformers import AutoProcessor, AutoModelForImageTextToText
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
 CKPT = "./models/student/sft_patch_grpo_v2"
 OUT  = Path("ocr_bench_preds.json")
 

@@ -199,7 +199,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--conditions", default="A",
                         help="Comma-separated conditions to run: A,B,C,D,E or 'all'")
-    parser.add_argument("--gpu", type=int, default=6, help="GPU index to use")
+    parser.add_argument("--gpu", type=int, default=0, help="GPU index to use")
     args = parser.parse_args()
     import os as _os; _os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
 

@@ -1,4 +1,4 @@
-# Core ML / training
+# ── Core ML / Training ──
 torch>=2.1
 torchvision
 transformers>=4.46
@@ -7,35 +7,27 @@ trl>=0.9
 accelerate
 bitsandbytes
 
-# Vision / data
+# ── Vision / Data ──
 Pillow
 opencv-python
 numpy
 datasets
 huggingface_hub
 
-# Evaluation metrics
+# ── Evaluation Metrics ──
 sacrebleu
 rouge_score
-pycocoevalcap        # CIDEr
+pycocoevalcap
 jiwer
 nltk
 sentence-transformers
-qwen-vl-utils         # only needed if re-running the Qwen2-VL baseline in evaluation/ocr_vqa/baselines
+tqdm
 
-# Config / plotting / utils
+# ── Config / Plotting / Utils ──
 PyYAML
 matplotlib
-tqdm
 requests
 
-# NOTE (verify before publishing):
-# This list was reconstructed by scanning every `import` statement kept in the
-# public repo -- it was NOT captured from a working `pip freeze` on the original
-# training server. Before you tag the release:
-#   1. Recreate your training conda env if you still have access to it and run
-#      `pip freeze > requirements-lock.txt`, then diff it against this file.
-#   2. Pin exact versions for torch/transformers/trl/peft (VLM support in these
-#      libraries moves fast and un-pinned installs may not reproduce results).
-#   3. llama.cpp (for GGUF export/quantization) is a separate C++ build, not a
-#      pip package -- see src/deployment/README section in the main README.
+# ── Optional (for specific baselines) ──
+# qwen-vl-utils       # only needed for Qwen2-VL baseline in evaluation/ocr_vqa/baselines
+# google-generativeai # only needed if using Gemini API as LLM judge

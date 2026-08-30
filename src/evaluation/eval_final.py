@@ -1,5 +1,5 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")  # override with: CUDA_VISIBLE_DEVICES=X python ...
 os.environ["HF_HOME"] = "./models/.hf_cache"
 os.chdir(".")
 
@@ -11,10 +11,7 @@ from transformers import AutoProcessor, AutoModelForImageTextToText
 from peft import PeftModel
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_MODEL = (
-    "models/.hf_cache/models--HuggingFaceTB--SmolVLM2-500M-Video-Instruct"
-    "/snapshots/7b375e1b73b11138ff12fe22c8f2822d8fe03467"
-)
+BASE_MODEL = "HuggingFaceTB/SmolVLM2-500M-Video-Instruct"
 CONDITIONS = {
     "base":           None,
     "sft_v2":         ("single", "models/student/sft_v2/best"),
@@ -50,7 +47,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 p(SEP)
 p("FINAL EVAL — 4 conditions on balanced_eval.json")
-p(f"GPU: 1 (CUDA_VISIBLE_DEVICES=1 → cuda:0)")
+p(f"GPU: {os.environ.get('CUDA_VISIBLE_DEVICES', '0')} → cuda:0")
 p(f"Prompt: {PROMPT[:80]}...")
 p(f"gen: max_new_tokens={MAX_NEW_TOKENS}, repetition_penalty=1.3, do_sample=False")
 p(SEP)
