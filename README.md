@@ -5,7 +5,7 @@
   <a href="TODO_PAPER_LINK"><img src="https://img.shields.io/badge/Paper-EMNLP%202026-red" alt="Paper"></a>
   <a href="https://huggingface.co/YOUR_ORG/smol-vl-blv"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow" alt="Model"></a>
   <a href="https://huggingface.co/datasets/YOUR_ORG/smol-vl-blv-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-orange" alt="Dataset"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey" alt="License"></a>
 </p>
 
 <!-- TODO: Replace YOUR_ORG with your actual HuggingFace organization/username -->
@@ -595,12 +595,17 @@ This work builds on the MCF/NAF evaluation frameworks from:
 
 ## 12. License
 
-This codebase is released under the [MIT License](LICENSE).
+This codebase is released under the **[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/)**.
+
+You are free to view, run, and cite this work for **non-commercial** purposes only. You may **not**:
+- Use this codebase or model, in whole or in part, for **commercial purposes**
+- **Redistribute copies** of this repository or the trained model weights, modified or unmodified, without explicit written permission from the authors
+
+Any use must include appropriate attribution to the original authors (see [Citation](#11-citation)).
 
 > **Note:** The datasets (Charades, AVCaps), base model (SmolVLM2), and teacher
 > model (Gemma-4-31B-IT) each have their own licenses. Users must comply with
 > those licenses separately when using the respective resources.
-
 ---
 
 ## Acknowledgments
