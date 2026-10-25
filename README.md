@@ -4,7 +4,7 @@
   <a href="https://smol-vl-blv.github.io/Smol-VL-BLV-website/"><img src="https://img.shields.io/badge/Project-Website-blue" alt="Website"></a>
   <a href="https://aclanthology.org/2026.emnlp-main.2273/"><img src="https://img.shields.io/badge/Paper-EMNLP%202026-red" alt="Paper"></a>
   <a href="https://huggingface.co/Rishabh3365/smolvlm2-blv-500m"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow" alt="Model"></a>
-  <a href="https://huggingface.co/datasets/YOUR_ORG/smol-vl-blv-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-orange" alt="Dataset"></a>
+  <!-- <a href="https://huggingface.co/datasets/YOUR_ORG/smol-vl-blv-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-orange" alt="Dataset"></a> -->
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey" alt="License"></a>
 </p>
 
@@ -70,7 +70,7 @@ Android phone** (Samsung Galaxy A55) via mixed-precision quantization.
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_ORG/smol-vl-blv.git
+git clone https://github.com/Shreyansh262/Small-Yet-Assistive.git
 cd smol-vl-blv
 
 # Create virtual environment
@@ -82,7 +82,6 @@ conda create -n smolvlblv python=3.10 -y && conda activate smolvlblv
 pip install -r requirements.txt
 ```
 
-<!-- TODO: Replace YOUR_ORG with your actual GitHub organization/username -->
 
 ### Model Weights
 
@@ -92,10 +91,9 @@ Download the fine-tuned model from HuggingFace:
 # The model will be auto-downloaded when you run demo/evaluation scripts.
 # Or download manually:
 pip install huggingface_hub
-huggingface-cli download YOUR_ORG/smol-vl-blv --local-dir models/student/final
+huggingface-cli download Rishabh3365/smolvlm2-blv-500m --local-dir models/student/final
 ```
 
-<!-- TODO: Replace YOUR_ORG/smol-vl-blv with your actual HuggingFace model repo -->
 
 ### llama.cpp (for GGUF quantization & mobile deployment)
 
@@ -124,7 +122,7 @@ python demo/run_demo_inference.py --image path/to/photo.jpg
 python demo/run_demo_inference.py --image_dir path/to/frames/
 
 # Specify model (HuggingFace ID or local path)
-python demo/run_demo_inference.py --image photo.jpg --model YOUR_ORG/smol-vl-blv
+python demo/run_demo_inference.py --image photo.jpg --model Rishabh3365/smolvlm2-blv-500m
 
 # CPU-only
 python demo/run_demo_inference.py --image photo.jpg --device cpu
@@ -133,7 +131,6 @@ python demo/run_demo_inference.py --image photo.jpg --device cpu
 python demo/run_demo_inference.py --image_dir ./frames/ --output results.json
 ```
 
-<!-- TODO: Replace YOUR_ORG/smol-vl-blv with your actual HuggingFace model repo -->
 
 ### Quick Start — GGUF (llama.cpp CLI)
 
@@ -168,24 +165,23 @@ from HuggingFace and runs the complete evaluation pipeline:
 
 ```bash
 # Run all benchmarks (OCR-Bench, TextVQA, BLV eval, LLM judge)
-python scripts/evaluate.py --model YOUR_ORG/smol-vl-blv --benchmarks all --gpu 0
+python scripts/evaluate.py --model Rishabh3365/smolvlm2-blv-500m --benchmarks all --gpu 0
 
 # Run specific benchmarks
-python scripts/evaluate.py --model YOUR_ORG/smol-vl-blv --benchmarks ocr_bench textvqa
+python scripts/evaluate.py --model Rishabh3365/smolvlm2-blv-500m --benchmarks ocr_bench textvqa
 
 # BLV evaluation only (keyword coverage + NLP metrics)
-python scripts/evaluate.py --model YOUR_ORG/smol-vl-blv --benchmarks blv_eval
+python scripts/evaluate.py --model Rishabh3365/smolvlm2-blv-500m --benchmarks blv_eval
 
 # Skip LLM judge (if you don't have a local 32B model)
-python scripts/evaluate.py --model YOUR_ORG/smol-vl-blv --benchmarks all --skip-judge
+python scripts/evaluate.py --model Rishabh3365/smolvlm2-blv-500m --benchmarks all --skip-judge
 
 # Use Gemini API instead of local Ollama for LLM judge
 export GEMINI_API_KEY="your-api-key"
-python scripts/evaluate.py --model YOUR_ORG/smol-vl-blv --benchmarks llm_judge \
+python scripts/evaluate.py --model Rishabh3365/smolvlm2-blv-500m --benchmarks llm_judge \
     --judge-backend gemini_api
 ```
 
-<!-- TODO: Replace YOUR_ORG/smol-vl-blv with your actual HuggingFace model repo -->
 
 **What the script does:**
 
@@ -260,7 +256,7 @@ python scripts/download_data.py --split eval
 python scripts/download_data.py --split train
 ```
 
-<!-- TODO: Replace YOUR_ORG/smol-vl-blv-data in scripts/download_data.py with your actual HuggingFace dataset repo -->
+<!-- TODO: Replace /smol-vl-blv-data in scripts/download_data.py with your actual HuggingFace dataset repo -->
 
 ### Option B: Generate Your Own Teacher Captions
 
@@ -428,11 +424,10 @@ Open Termux on your Android device and run:
 ```bash
 # Download and run the setup script (builds llama.cpp, ~30-40 min)
 pkg install -y wget
-wget https://raw.githubusercontent.com/YOUR_ORG/smol-vl-blv/main/scripts/setup_termux.sh
+wget https://raw.githubusercontent.com/Shreyansh262/Small-Yet-Assistive/main/scripts/setup_termux.sh
 bash setup_termux.sh
 ```
 
-<!-- TODO: Replace YOUR_ORG with your actual GitHub organization/username -->
 
 Or copy the setup script manually and run it:
 
