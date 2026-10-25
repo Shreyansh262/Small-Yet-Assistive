@@ -2,14 +2,12 @@
 
 <p align="center">
   <a href="https://smol-vl-blv.github.io/Smol-VL-BLV-website/"><img src="https://img.shields.io/badge/Project-Website-blue" alt="Website"></a>
-  <a href="TODO_PAPER_LINK"><img src="https://img.shields.io/badge/Paper-EMNLP%202026-red" alt="Paper"></a>
-  <a href="https://huggingface.co/YOUR_ORG/smol-vl-blv"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow" alt="Model"></a>
+  <a href="https://aclanthology.org/2026.emnlp-main.2273/"><img src="https://img.shields.io/badge/Paper-EMNLP%202026-red" alt="Paper"></a>
+  <a href="https://huggingface.co/Rishabh3365/smolvlm2-blv-500m"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow" alt="Model"></a>
   <a href="https://huggingface.co/datasets/YOUR_ORG/smol-vl-blv-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-orange" alt="Dataset"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey" alt="License"></a>
 </p>
 
-<!-- TODO: Replace YOUR_ORG with your actual HuggingFace organization/username -->
-<!-- TODO: Replace TODO_PAPER_LINK with the ACL Anthology / ArXiv link once available -->
 
 > **Accepted at EMNLP 2026**
 
