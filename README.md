@@ -1,4 +1,4 @@
-# Smol-VL-BLV: Spatially-Aware Post-Training for Low Vision
+# Small yet Assistive: Spatially-Aware Post-Training for Low Vision
 
 <p align="center">
   <a href="https://smol-vl-blv.github.io/Smol-VL-BLV-website/"><img src="https://img.shields.io/badge/Project-Website-blue" alt="Website"></a>
